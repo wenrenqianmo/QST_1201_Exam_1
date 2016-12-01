@@ -13,8 +13,31 @@ public class QSTLinkList
 		public void setValue(int value){
 			this.value = value;
 		}
+		public int getValue(){
+			return this.value;
+		}
 	}
 	private static void printLinkList(Node head) {
+		//方法一		
+//		String str = "";
+//		if(head.next == null){
+//			System.out.println("不存在");
+//		}
+//		Node curr = head;
+//		while(curr.next!=null){
+//			str = str+curr.getValue()+"->";
+//			curr = curr.next;
+//		}
+//		str = str+curr.getValue();
+//		System.out.println(str);
+		
+		//方法二
+		Node n = head;
+		for(; n.next != null; n = n.next){
+			System.out.print(n.getValue()+"->");
+		}
+		System.out.println(n.getValue());			
+
 	}
   
   public static void main( String[] args ){
